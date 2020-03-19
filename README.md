@@ -8,17 +8,17 @@ Gorilla WebSocket is a [Go](http://golang.org/) implementation of the
 
 ### Documentation
 
-* [API Reference](https://pkg.go.dev/github.com/gorilla/websocket?tab=doc)
-* [Chat example](https://github.com/gorilla/websocket/tree/master/examples/chat)
-* [Command example](https://github.com/gorilla/websocket/tree/master/examples/command)
-* [Client and server example](https://github.com/gorilla/websocket/tree/master/examples/echo)
-* [File watch example](https://github.com/gorilla/websocket/tree/master/examples/filewatch)
+- [API Reference](https://pkg.go.dev/github.com/gorilla/websocket?tab=doc)
+- [Chat example](https://github.com/gorilla/websocket/tree/master/examples/chat)
+- [Command example](https://github.com/gorilla/websocket/tree/master/examples/command)
+- [Client and server example](https://github.com/gorilla/websocket/tree/master/examples/echo)
+- [File watch example](https://github.com/gorilla/websocket/tree/master/examples/filewatch)
 
 ### Status
 
 The Gorilla WebSocket package provides a complete and tested implementation of
-the [WebSocket](http://www.rfc-editor.org/rfc/rfc6455.txt) protocol. The
-package API is stable.
+the [WebSocket](http://www.rfc-editor.org/rfc/rfc6455.txt) protocol. The package
+API is stable.
 
 ### Installation
 
@@ -26,9 +26,10 @@ package API is stable.
 
 ### Protocol Compliance
 
-The Gorilla WebSocket package passes the server tests in the [Autobahn Test
-Suite](https://github.com/crossbario/autobahn-testsuite) using the application in the [examples/autobahn
-subdirectory](https://github.com/gorilla/websocket/tree/master/examples/autobahn).
+The Gorilla WebSocket package passes the server tests in the
+[Autobahn Test Suite](https://github.com/crossbario/autobahn-testsuite) using
+the application in the
+[examples/autobahn subdirectory](https://github.com/gorilla/websocket/tree/master/examples/autobahn).
 
 ### Gorilla WebSocket compared with other packages
 
@@ -53,12 +54,12 @@ subdirectory](https://github.com/gorilla/websocket/tree/master/examples/autobahn
 
 Notes:
 
-1. Large messages are fragmented in [Chrome's new WebSocket implementation](http://www.ietf.org/mail-archive/web/hybi/current/msg10503.html).
-2. The application can get the type of a received data message by implementing
-   a [Codec marshal](http://godoc.org/golang.org/x/net/websocket#Codec.Marshal)
+1. Large messages are fragmented in
+   [Chrome's new WebSocket implementation](http://www.ietf.org/mail-archive/web/hybi/current/msg10503.html).
+2. The application can get the type of a received data message by implementing a
+   [Codec marshal](http://godoc.org/golang.org/x/net/websocket#Codec.Marshal)
    function.
 3. The go.net io.Reader and io.Writer operate across WebSocket frame boundaries.
-  Read returns when the input buffer is full or a frame boundary is
-  encountered. Each call to Write sends a single frame message. The Gorilla
-  io.Reader and io.WriteCloser operate on a single WebSocket message.
-
+   Read returns when the input buffer is full or a frame boundary is
+   encountered. Each call to Write sends a single frame message. The Gorilla
+   io.Reader and io.WriteCloser operate on a single WebSocket message.
